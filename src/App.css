@@ -10,14 +10,19 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 24px;
-  border-bottom: 1px solid #473c67;
+  border-bottom: 1px solid #36523e;
 }
 
 .site-title {
-  color: #f5d77b;
+  color: #78e08f;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-title:hover {
+  color: #b8f2c2;
 }
 
 .nav-links {
@@ -26,14 +31,148 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #f5fff7;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #c9a7ff;
+  color: #d7b8ff;
 }
 
 .page {
   padding-top: 40px;
+}
+
+.page h1 {
+  color: #f5fff7;
+}
+
+.page h2 {
+  color: #b8f2c2;
+}
+
+.page p {
+  color: #b8cbbd;
+}
+
+.post-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-card {
+  padding: 20px;
+  margin-bottom: 18px;
+  background-color: #18231c;
+  border: 1px solid #36523e;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-card h3 {
+  color: #f5fff7;
+}
+
+.post-card:hover {
+  border-color: #78e08f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(120, 224, 143, 0.12);
+}
+
+.post-details {
+  padding: 28px;
+  background-color: #18231c;
+  border: 1px solid #36523e;
+  border-radius: 10px;
+}
+
+.post-details h1 {
+  margin-top: 12px;
+  color: #f5fff7;
+}
+
+.post-date {
+  font-size: 14px;
+}
+
+.post-content {
+  margin-top: 28px;
+  color: #f5fff7;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.post-image {
+  display: block;
+  max-width: 100%;
+  margin-top: 24px;
+  border: 1px solid #36523e;
+  border-radius: 8px;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 28px;
+  background-color: #18231c;
+  border: 1px solid #36523e;
+  border-radius: 10px;
+}
+
+.post-form label {
+  margin-top: 8px;
+  color: #b8f2c2;
+  font-weight: bold;
+}
+
+.post-form input,
+.post-form textarea {
+  width: 100%;
+  padding: 12px;
+  color: #f5fff7;
+  background-color: #101713;
+  border: 1px solid #36523e;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  outline: none;
+  border-color: #78e08f;
+  box-shadow: 0 0 0 3px rgba(120, 224, 143, 0.12);
+}
+
+.post-form textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.post-form button {
+  width: fit-content;
+  margin-top: 14px;
+  padding: 11px 20px;
+  color: #101713;
+  background-color: #78e08f;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-form button:hover {
+  background-color: #b8f2c2;
+}
+
+.post-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

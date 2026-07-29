@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react" // importing hooks to use react feature useState (to remember component information) and useEffect (allows component to sync with an external system like supabase)
+import { Link } from "react-router" // Link handles client side navigation without performing a full page reoload
 import { supabase } from "../client" // imports the object created in client.js
 
 function Home() {
@@ -54,13 +55,22 @@ function Home() {
           <p>No posts have been created yet.</p> 
         ) : (
           <div className="posts-list"> 
-            {posts.map((post) => ( 
-              <article className="post-card" key={post.id}>
-                <p>Created: {new Date(post.created_at).toLocaleString()}</p> 
-                <h3>{post.title}</h3> 
-                <p>Upvotes: {post.upvotes}</p>
-              </article>
-            ))}
+{posts.map((post) => (
+  <Link
+    className="post-link"
+    to={`/post/${post.id}`}
+    key={post.id}
+  >
+    <article className="post-card">
+      <p>
+        Created: {new Date(post.created_at).toLocaleString()}
+      </p>
+
+      <h3>{post.title}</h3>
+      <p>Upvotes: {post.upvotes}</p>
+    </article>
+  </Link>
+))}
           </div>
         )}
       </section>
