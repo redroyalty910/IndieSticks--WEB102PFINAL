@@ -3,6 +3,7 @@ import "./App.css" // bring CSS rules into this file
 import Home from "./pages/Home.jsx" // here down is the rest of our page components
 import CreatePost from "./pages/CreatePost.jsx"
 import PostDetails from "./pages/PostDetails.jsx"
+import EditPost from "./pages/EditPost.jsx" // imports the page that lets users update an existing post
 
 function App() { // App function represents the entire visible application
   return (
@@ -22,6 +23,7 @@ function App() { // App function represents the entire visible application
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreatePost />} />
         <Route path="/post/:id" element={<PostDetails />} />
+        <Route path="/edit/:id" element={<EditPost />} /> {/* displays EditPost and provides the ID of the post being edited */}
       </Routes>
     </div>
   )
