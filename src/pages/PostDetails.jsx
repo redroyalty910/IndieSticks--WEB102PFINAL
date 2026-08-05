@@ -270,7 +270,7 @@ function PostDetails() {
           onSubmit={handleCommentSubmit}
         >
           <label htmlFor="commentInput">
-            I want to hear what you think about the above text; if anything comes to mind, I want you to share it!
+            Say something down below!
           </label>
 
           <textarea
@@ -304,7 +304,7 @@ function PostDetails() {
         ) : commentsError ? (
           <p className="action-error">{commentsError}</p>
         ) : comments.length === 0 ? (
-          <p>There is NOTHING being said at this moment; but I implore you speak your peace!</p>
+          <p>There is NOTHING being said!</p>
         ) : (
           <div className="comments-list">
             {comments.map((comment) => (
